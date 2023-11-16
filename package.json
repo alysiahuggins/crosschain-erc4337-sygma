@@ -1,0 +1,17 @@
+{
+  "name": "erc4337-wallet",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<hi@alysia.tech>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@account-abstraction/sdk": "^0.6.0",
+    "dotenv": "^16.3.1",
+    "update-dotenv": "^1.1.1",
+    "userop": "^0.3.3",
+    "@buildwithsygma/sygma-sdk-core": "workspace:*"
+  }
+}
