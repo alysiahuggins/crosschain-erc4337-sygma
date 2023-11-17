@@ -42,8 +42,8 @@ async function main() {
     bundlerRpcUrl!,
     {
       entryPoint: entryPointAddress,
-      factory: factoryAddress,
-      paymasterMiddleware: paymaster,
+      factory: factoryAddress, //my smart wallet factory created on mumbai testnet
+      paymasterMiddleware: paymaster, //stackup paymaster
     },
   );
   console.log('smart wallet address', smartAccount.getSender());
@@ -89,7 +89,6 @@ async function main() {
   //get sdk data
   const SEPOLIA_CHAIN_ID = 11155111;
   const depositData = createERCDepositData(transferAmount1.toString(), receiverAddress, SEPOLIA_CHAIN_ID);
-  console.log(depositData);
 
 
   let data = [
@@ -107,7 +106,7 @@ async function main() {
   );
 
   const batchEvent = await batchResult.wait();
-  console.log(`Batch Transaction hash: ${batchEvent?.transactionHash}`);
+  console.log(`Smart Wallet Cross Chain Transaction hash: ${batchEvent?.transactionHash}`);
 
   
 }
